@@ -256,7 +256,7 @@ const projectData = [
     liveUrl: 'https://github.com/lawtrinidad/Laravel-FMS',
   },
   {
-    img: 'img/urbanbreeze.jpg',
+    img: 'img/urbanbreeze.JPG',
     gradient: 'linear-gradient(135deg, #1a0d2a, #4a1b6b)',
     tag: 'Data Analytics',
     year: '2025',
