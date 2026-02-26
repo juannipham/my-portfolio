@@ -783,7 +783,7 @@ nav.scrolled {
 #projCurrent { color: var(--accent); }
 
 /* Stage + track */
-.projects-stage { overflow: hidden; }
+.projects-stage { overflow: hidden; width: 100%; }
 .projects-track {
   display: flex; gap: 24px;
   transition: transform .7s var(--ease);
@@ -792,7 +792,7 @@ nav.scrolled {
 
 /* Project card */
 .proj-card {
-  min-width: calc(33.333% - 16px);
+  flex: 0 0 calc((100% - 48px) / 3);
   flex-shrink: 0;
   background: var(--bg-3);
   border: 1px solid var(--border);
@@ -800,6 +800,17 @@ nav.scrolled {
   cursor: none;
   transition: border-color .3s, transform .4s var(--ease), box-shadow .4s;
   display: flex; flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .proj-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .proj-card {
+    flex: 0 0 100%;
+  }
 }
 .proj-card:hover {
   border-color: var(--border-2);

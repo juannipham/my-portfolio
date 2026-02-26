@@ -166,18 +166,19 @@ function getMaxSlide() {
 }
 
 function updateSlider() {
-  cardsVisible = getCardsVisible();
-  const cardEl  = cards[0];
-  const gap     = 24;
-  const cardW   = cardEl.offsetWidth + gap;
+  const cardStyle = window.getComputedStyle(cards[0]);
+  const gap = parseFloat(window.getComputedStyle(track).gap) || 24;
+  const cardW = cards[0].offsetWidth + gap;
 
+  currentSlide = Math.min(currentSlide, getMaxSlide());
   track.style.transform = `translateX(-${currentSlide * cardW}px)`;
 
-  const progress = getMaxSlide() > 0 ? (currentSlide / getMaxSlide()) * 100 : 0;
+  const maxSlide = getMaxSlide();
+  const progress = maxSlide > 0 ? (currentSlide / maxSlide) * 100 : 100;
   progressFill.style.width = progress + '%';
 
   projCurrent.textContent = String(currentSlide + 1).padStart(2, '0');
-  document.getElementById('projTotal').textContent = String(getMaxSlide() + 1).padStart(2, '0');
+  document.getElementById('projTotal').textContent = String(maxSlide + 1).padStart(2, '0');
 }
 
 document.getElementById('projPrev').addEventListener('click', () => {
@@ -242,7 +243,28 @@ const projectData = [
     details: 'The platform offers user-friendly navigation, searchable guides across popular and competitive games, and a community space where gamers can connect, share insights, and grow together.',
     techs: ['Wix', 'UI', 'UX', 'Game-guides', 'Collaboration'],
     liveUrl: 'https://mandangjunel4.wixsite.com/telecall-12-gamo',
-    
+  },
+  {
+    img: 'img/iskolar.jpg',
+    gradient: 'linear-gradient(135deg, #2a1a0d, #6b3a1b)',
+    tag: 'Full-stack Website',
+    year: '2025',
+    title: 'IskoLAr',
+    desc: 'IskoLAr: was developed to address the inefficiencies of traditional document storage and sharing at the Polytechnic University of the Philippines.',
+    details: 'This system serves as a centralized digital repository where users can upload, retrieve, and manage important documents and academic files.',
+    techs: ['Laravel', 'PHP', 'Bootstrap', 'Database System', 'Collaboration'],
+    liveUrl: 'https://github.com/lawtrinidad/Laravel-FMS',
+  },
+  {
+    img: 'img/urbanbreeze.jpg',
+    gradient: 'linear-gradient(135deg, #1a0d2a, #4a1b6b)',
+    tag: 'Data Analytics',
+    year: '2025',
+    title: 'Exploratory Data Analysis',
+    desc: 'A data analytics project that investigates how the proximity of Points of Interest (POIs) affects local air quality levels in Navotas',
+    details: 'The study applies exploratory data analysis techniques to identify patterns, correlations, and trends between urban activity zones and environmental conditions.',
+    techs: ['Tableau', 'Python', 'Matplotlib', 'Google Colab', 'Collaboration'],
+    liveUrl: 'https://drive.google.com/file/d/1istpVnDHMG-4toeZ_IocY4GSWne8Xo9c/view?usp=sharing',
   },
   {
     img: 'img/antitres.jpg',
@@ -254,28 +276,6 @@ const projectData = [
     details: 'The app allows users to track schedules, subjects, tasks, deadlines, and grades in one organized platform.',
     techs: ['Figma', 'UI', 'UX', 'Collaboration'],
     liveUrl: 'https://www.figma.com/design/1hsYut658ZaOqOLGGZ2JEs/AntiTres-Academic-Tracker?node-id=0-1&t=BjLcc7XWgHzyOsIL-1',
-  },
-  {
-    img: 'img/iskolar.jpg',
-    gradient: 'linear-gradient(135deg, #2a1a0d, #6b3a1b)',
-    tag: 'Full-stack Website',
-    year: '2025',
-    title: 'IskoLAr',
-    desc: 'IskoLAr: was developed to address the inefficiencies of traditional document storage and sharing at the Polytechnic University of the Philippines.',
-    details: 'Used Python and pandas to clean and segment enrollment data, then built Matplotlib visualizations that were presented to the academic council for policy review.',
-    techs: ['Laravel', 'PHP', 'Bootstrap', 'Database System', 'Collaboration'],
-    liveUrl: 'https://github.com/lawtrinidad/Laravel-FMS',
-  },
-  {
-    img: 'img/iskolar.jpg',
-    gradient: 'linear-gradient(135deg, #1a0d2a, #4a1b6b)',
-    tag: 'Web Development',
-    year: '2023',
-    title: 'Portfolio Website',
-    desc: 'Personal portfolio designed and developed from the ground up — custom animations, scroll-triggered effects, and a fully responsive layout.',
-    details: 'Built with vanilla HTML/CSS/JS and GSAP for animations. Designed in Figma first, then developed iteratively. Focused on performance, readability, and personality.',
-    techs: ['HTML / CSS', 'JavaScript', 'GSAP', 'Figma', 'Responsive Design'],
-    liveUrl: '#',
   }
 ];
 
