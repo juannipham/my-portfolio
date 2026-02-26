@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Computer Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--   NOISE OVERLAY  -->
+  <div class="noise"></div>
+
+  <!--  CURSOR  -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!--  NAV  -->
+  <nav id="nav">
+    <a href="#hero" class="nav-brand">
+      <span class="brand-bracket">[</span>Juan Miguel<span class="brand-bracket">]</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact"><span class="nav-cta">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <!--  HERO  -->
+  <section id="hero">
+    <div class="hero-bg-text">ENGINEER</div>
+
+    <div class="hero-left">
+      <p class="hero-eyebrow"><span class="eyebrow-line"></span> Computer Engineer &amp; Webdev</p>
+      <h1 class="hero-title">
+        <span class="hero-title-line" data-text="YOUR">Juan</span>
+        <span class="hero-title-line italic" data-text="NAME">Miguel</span>
+        <span class="hero-title-line" data-text="HERE.">Gamo</span>
+      </h1>
+      <p class="hero-desc">
+        I build things that live at the intersection of <em>engineering precision</em> and <em>creative design</em> — from robust data systems to interfaces people actually love using.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-solid">See My Work</a>
+        <a href="#contact" class="btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="meta-num" data-target="5">0</span><span class="meta-label">Projects</span></div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item"><span class="meta-num" data-target="1">0</span><span class="meta-label">Years Exp</span></div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item"><span class="meta-num" data-target="10">0</span><span class="meta-label">Skills</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-wrapper">
+        <div class="photo-ring"></div>
+        <div class="photo-ring ring2"></div>
+        <div class="photo-frame">
+          <!-- CHANGE THIS IMG SRC TO YOUR PHOTO PATH e.g. src="photo.jpg" -->
+          <img src="img/me.jpg" alt="Profile Photo" id="profilePhoto" class="photo-img" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
+          <div class="photo-fallback" id="photoFallback">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="38" r="18" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 85c0-19.33 15.67-35 35-35s35 15.67 35 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="photo-tag photo-tag-1">✦ Available for work</div>
+        <div class="photo-tag photo-tag-2">UI/UX · Data · Design</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down">
+      <div class="scroll-wheel"></div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!--  ABOUT  -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-tag">01 — About</div>
+      <div class="about-layout">
+        <div class="about-headline">
+          <h2 class="section-title">A little<br/><em>about me.</em></h2>
+          <div class="about-accent-bar"></div>
+        </div>
+        <div class="about-body">
+          <p class="about-lead">
+            I’m a Computer Engineer passionate about building technology that is both <em>functional</em> and <em>meaningful</em>.
+          </p>
+          <p class="about-text">
+            My work spans <strong>data analysis</strong>, <strong>development</strong>, and <strong>UI/UX design</strong> — transforming raw data into actionable insights and translating complex requirements into intuitive, user-centered interfaces.
+          </p>
+          <p class="about-text">
+            I have a growing foundation in <strong>networking</strong> and <strong>cybersecurity</strong>, and I'm continuously expanding my knowledge in <strong>artificial intellegence</strong> in this advancing era — exploring how AI can enhance data systems, automation, and user experiences. Adaptable and fast-learning, I thrive in environments where technology evolves and innovation is constant.
+          </p>
+          <div class="about-chips">
+            <span class="chip">Data Analytics</span>
+            <span class="chip">UI/UX Design</span>
+            <span class="chip">Graphic Design</span>
+            <span class="chip">Networking</span>
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">Computer Engineering</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  SKILLS  -->
+  <section id="skills" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-tag">02 — Skills</div>
+      <h2 class="section-title">What I<br/><em>bring to the table.</em></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-block">
+          <div class="skill-block-icon">◈</div>
+          <h3 class="skill-block-title">Data Analytics</h3>
+          <p class="skill-block-desc">Transforming raw data into clear, actionable insights. Comfortable with spreadsheets, SQL, and data visualization tools.</p>
+          <div class="skill-tags">
+            <span>Excel / Google Sheets</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>Python (pandas)</span>
+            <span>Data Visualization</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-icon">◉</div>
+          <h3 class="skill-block-title">UI/UX Design</h3>
+          <p class="skill-block-desc">Designing interfaces that are intuitive, accessible, and aesthetically refined — from wireframes to high-fidelity prototypes.</p>
+          <div class="skill-tags">
+            <span>Figma</span>
+            <span>Adobe XD</span>
+            <span>Canva</span>
+            <span>Prototyping</span>
+            <span>User Research</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-icon">▣</div>
+          <h3 class="skill-block-title">Graphic Design</h3>
+          <p class="skill-block-desc">Creating visual assets that communicate clearly — brand identity, layouts, illustrations, and digital media.</p>
+          <div class="skill-tags">
+            <span>Canva</span>
+            <span>Figma</span>
+            <span>Adobe Photoshop</span>
+            <span>Typography</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-icon">◎</div>
+          <h3 class="skill-block-title">Web Development</h3>
+          <p class="skill-block-desc">Building functional, responsive websites and web interfaces with clean, maintainable code.</p>
+          <div class="skill-tags">
+            <span>HTML / CSS</span>
+            <span>JavaScript</span>
+            <span>PHP / Laravel</span>
+            <span>Python</span>
+            <span>ReactJS</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-icon">◫</div>
+          <h3 class="skill-block-title">Networking</h3>
+          <p class="skill-block-desc">Foundational knowledge of network protocols, architecture, and how systems communicate reliably.</p>
+          <div class="skill-tags">
+            <span>LAN/WAN</span>
+            <span>Cisco Basics</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="35"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="skill-block-icon">⬡</div>
+          <h3 class="skill-block-title">Cybersecurity</h3>
+          <p class="skill-block-desc">Exploring the principles of securing systems, threat awareness, and safe computing practices.</p>
+          <div class="skill-tags">
+            <span>Security Fundamentals</span>
+            <span>Risk Awareness</span>
+            <span>Encryption Basics</span>
+          </div>
+          <div class="skill-bar-row">
+            <span class="skill-bar-label">Proficiency</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  EXPERIENCE  -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div class="section-tag">03 — Experience</div>
+      <h2 class="section-title">Work &amp;<br/><em>Education.</em></h2>
+
+      <div class="timeline">
+
+        <!-- WORK EXPERIENCE -->
+        <div class="timeline-col">
+          <div class="timeline-col-header">
+            <span class="timeline-col-icon">◈</span> Work Experience
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2024</span>
+              <h3 class="timeline-role">Data Analyst Intern</h3>
+              <span class="timeline-company">AllCard, Inc.</span>
+              <p class="timeline-desc">Managed and analyzed operational data, created performance reports, and built dashboards to improve reporting efficiency and data accuracy.</p>
+              <div class="timeline-tags"><span>Excel</span><span>Data Validation</span><span>Data Viz</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2023</span>
+              <h3 class="timeline-role">Backend Developer Intern</h3>
+              <span class="timeline-company">Lexmeet, Inc.</span>
+              <p class="timeline-desc">Developed and optimized backend systems using Laravel, improving database performance and supporting web application functionality.</p>
+              <div class="timeline-tags"><span>Laravel</span><span>Database Schema</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period"></span>
+              <h3 class="timeline-role"></h3>
+              <span class="timeline-company"></span>
+              <p class="timeline-desc"></p>
+              <div class="timeline-tags"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="timeline-col">
+          <div class="timeline-col-header">
+            <span class="timeline-col-icon">◉</span> Education
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2022 — 2026</span>
+              <h3 class="timeline-role">BS Computer Engineering</h3>
+              <span class="timeline-company">Polytechnic University of the Philippines</span>
+              <p class="timeline-desc">Specialized in Big Data, Dean's Lister</p>
+              <p class="timeline-desc">Thesis - LakwatCharge: Powerbank Rental and Charging System for a Reliable Charging Solution</p>
+              <div class="timeline-tags"><span>Thesis</span><span>Dean's List</span><span>Big Data</span></div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Present</span>
+              <h3 class="timeline-role">Certifications</h3>
+              <span class="timeline-company">Various Platforms</span>
+              <p class="timeline-desc">A collection of certifications and courses I've completed across design, data, and technology.</p>
+              <button class="cert-trigger" act>
+                <a href="https://drive.google.com/drive/folders/1DVjlgg8K69PUZby3pmxGrbupPIxGkaMf?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <span class="cert-trigger-icon">✦</span>
+                  Click here to view
+                  <span class="cert-trigger-arrow">→</span>
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2025</span>
+              <h3 class="timeline-role">Software Engineering Day Seminar</h3>
+              <span class="timeline-company">PUPCpE Department</span>
+              <p class="timeline-desc">Brought industry-driven topics such as SAP, robotics, artificial intelligence, fintech, GitHub collaboration, data skills, and Salesforce innovation to showcase how technology shapes modern businesses together.</p>
+              <div class="timeline-tags"><span>AI/ML</span><span>Robotics</span><span>SAP</span><span>Data</span><span>GitHub</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  PROJECTS  -->
+  <section id="projects" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-tag">04 — Projects</div>
+      <div class="projects-header">
+        <h2 class="section-title">Featured<br/><em>Projects.</em></h2>
+        <div class="projects-nav">
+          <button class="proj-nav-btn" id="projPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <span class="proj-counter"><span id="projCurrent">01</span> / <span id="projTotal">06</span></span>
+          <button class="proj-nav-btn" id="projNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="projects-stage">
+        <div class="projects-track" id="projectsTrack">
+
+          <div class="proj-card" onclick="openProject(0)">
+            <div class="proj-card-img">
+              <img src="img/cabin.jpg" alt="Dessert Shop" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">Frontend Development</span>
+                <span class="proj-year">2026</span>
+              </div>
+              <h3 class="proj-card-title">PaulBert's Cabin</h3>
+              <p class="proj-card-desc">PaulBert’s Cabin is a web-based booking and promotional website designed to showcase a cozy cabin rental experience.</p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>Tailwind CSS</span><span>React</span><span>Vite</span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProject(1)">
+            <div class="proj-card-img">
+              <img src="img/dessert.jpg" alt="Dessert Shop" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">Frontend Development</span>
+                <span class="proj-year">2023</span>
+              </div>
+              <h3 class="proj-card-title">Desserts Shop</h3>
+              <p class="proj-card-desc">This static website project, built using HTML, CSS, and JavaScript, features an interactive dessert and pastry showcase.</p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProject(2)">
+            <div class="proj-card-img">
+              <img src="img/learnlearn.JPG" alt="Learnlearn" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">UI/UX Design</span>
+                <span class="proj-year">2022</span>
+              </div>
+              <h3 class="proj-card-title">Game Guide Platform</h3>
+              <p class="proj-card-desc">LearnLearn.games is a dynamic gaming guide website created to help players improve their skills through in-depth tutorials and solutions.</p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>Wix</span><span>UI/UX</span><span>Web builder</span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProject(3)">
+            <div class="proj-card-img">
+              <img src="img/antitres.JPG" alt="AntiTres" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">UI/UX</span>
+                <span class="proj-year">2024</span>
+              </div>
+              <h3 class="proj-card-title">AntiTres: Academic Tracker</h3>
+              <p class="proj-card-desc">AntiTres: Academic Tracker is a mobile school planner application designed to help students efficiently manage their academic responsibilities anytime and anywhere.</p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>Figma</span><span>UI/UX</span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProject(4)">
+            <div class="proj-card-img">
+              <img src="img/iskolar.JPG" alt="AntiTres" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">Full-stack Website</span>
+                <span class="proj-year">2025</span>
+              </div>
+              <h3 class="proj-card-title">IskoLAr: File Repository System</h3>
+              <p class="proj-card-desc">IskoLAr was developed to address the inefficiencies of traditional document storage and sharing at the Polytechnic University of the Philippines. </p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>Laravel</span><span>Bootstrap</span><span>Database  </span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProject(5)">
+            <div class="proj-card-img" style="background: linear-gradient(135deg, #1a0d2a, #4a1b6b);">
+              <span class="proj-emoji">💻</span>
+            </div>
+            <div class="proj-card-body">
+              <div class="proj-card-meta">
+                <span class="proj-tag">Web Development</span>
+                <span class="proj-year">2023</span>
+              </div>
+              <h3 class="proj-card-title">Portfolio Website</h3>
+              <p class="proj-card-desc">Personal portfolio designed and built from scratch with custom animations and responsive layout.</p>
+              <div class="proj-card-footer">
+                <div class="proj-techs"><span>HTML/CSS</span><span>JavaScript</span><span>GSAP</span></div>
+                <span class="proj-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="projects-progress">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!--  PROJECT MODAL  -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeProject(event)">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" onclick="closeProjectDirect()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-hero" id="modalHero"></div>
+      <div class="modal-content">
+        <div class="modal-meta">
+          <span class="proj-tag" id="modalTag"></span>
+          <span class="proj-year" id="modalYear"></span>
+        </div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-details" id="modalDetails"></div>
+        <div class="modal-techs" id="modalTechs"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--  HOBBIES  -->
+  <section id="hobbies" class="section">
+    <div class="section-inner">
+      <div class="section-tag">05 — Life Outside Work</div>
+      <h2 class="section-title">Hobbies &amp;<br/><em>Interests.</em></h2>
+
+      <div class="hobbies-grid">
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🎮</div>
+          <h3 class="hobby-title">Gaming</h3>
+          <p class="hobby-desc">I enjoy to play online games such as MOBA, FPS, and MMORPGs.</p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🎵</div>
+          <h3 class="hobby-title">Music</h3>
+          <p class="hobby-desc">Listening to and discovering different genres of music to calm or energize myself.</p>
+        </div>
+
+        <div class="hobby-card hobby-card-featured">
+          <div class="hobby-icon">📺</div>
+          <h3 class="hobby-title">Watching</h3>
+          <p class="hobby-desc">Like to watch movies, series, and animes.</p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🏀</div>
+          <h3 class="hobby-title">Sports</h3>
+          <p class="hobby-desc">Playing and following various sports activities such as basketball, badminton, and volleyball.</p>
+        </div>
+
+
+
+        <div class="hobby-card hobby-card-featured">
+          <div class="hobby-icon">♚</div>
+          <h3 class="hobby-title">Strategy games</h3>
+          <p class="hobby-desc">I play strategic games like chess to challenge my critical thinking.</p>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">✈️</div>
+          <h3 class="hobby-title">Travel</h3>
+          <p class="hobby-desc">Exploring new places, cultures, and perspectives.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section id="contact" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-tag">06 — Contact</div>
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <h2 class="section-title contact-title">Let's build<br/><em>something.</em></h2>
+          <p class="contact-sub">Open to projects, collaborations, or just a good conversation. Drop me a message or reach out on any platform.</p>
+
+          <div class="contact-email">
+            <span class="contact-email-label">Primary</span>
+            <a href="mailto:juanmiguelgamonido@gmail.com" class="contact-email-addr">juanmiguelgamonido@gmail.com</a>
+          </div>
+
+          <div class="social-grid">
+            <a href="https://www.facebook.com/juanmiguel.0623" target="_blank" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">Facebook</span>
+                <span class="social-handle">Juan Miguel Gamonido</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+
+            <a href="www.linkedin.com/in/juanmiguelgamo" target="_blank" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">LinkedIn</span>
+                <span class="social-handle">Juan Miguel Gamo</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+
+            <a href="https://github.com/juannipham" target="_blank" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">GitHub</span>
+                <span class="social-handle">juannipham</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+
+            <a href="mailto:juanmiguelgamonido@gmail.com" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">Email</span>
+                <span class="social-handle">juanmiguelgamonido@gmail.com</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+
+            <a href="#" target="_blank" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">Instagram</span>
+                <span class="social-handle">@juan.ni_</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+
+            <a href="#" target="_blank" class="social-card">
+              <div class="social-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+              </div>
+              <div class="social-card-info">
+                <span class="social-name">Discord</span>
+                <span class="social-handle">imwnter</span>
+              </div>
+              <span class="social-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" action="https://formspree.io/f/xykdlovp" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="Your full name" required name="name"/>
+              </div>
+              <div class="form-field">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com" required name="email"/>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Subject</label>
+              <input type="text" placeholder="What's this about?" name="subject"/>
+            </div>
+            <div class="form-field">
+              <label>Message</label>
+              <textarea placeholder="Tell me about your project or idea..." rows="6" required name="message"></textarea>
+            </div>
+            <button type="submit" class="btn-solid form-submit">Send Message <span class="btn-arrow">→</span></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">JUAN MIGUEL</span>
+      <span class="footer-copy">© 2025 — Designed &amp; Built with care.</span>
+      <div class="footer-status">
+        <span class="status-dot"></span> Available for freelance
+      </div>
+    </div>
+  </footer>
+
+  <!--  TOAST  -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
