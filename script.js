@@ -1,7 +1,8 @@
 /* =============================================
    PORTFOLIO — script.js
    ============================================= */
-
+window.history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
 // ── Register GSAP ScrollTrigger ──
 gsap.registerPlugin(ScrollTrigger);
 

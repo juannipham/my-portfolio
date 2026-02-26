@@ -216,6 +216,12 @@ nav.scrolled {
   max-width: 1300px;
   margin: 0 auto;
   position: relative;
+  scroll-margin-top: 0;
+}
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 140px;
+  }
 }
 
 /* Big BG text */
@@ -1239,11 +1245,17 @@ footer {
   .nav-toggle { display: flex; }
   .nav-links {
     display: none;
-    position: fixed; inset: 0; top: 60px;
-    flex-direction: column; align-items: center; justify-content: center;
-    background: rgba(12,12,14,0.97);
-    backdrop-filter: blur(24px);
-    gap: 32px; z-index: 499;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0c0c0e;
+    gap: 32px;
+    z-index: 600;
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.2rem; }
